@@ -1,0 +1,28 @@
+// Custom.scss
+
+// Option A: Include all of Bootstrap
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+// Include any default variable overrides here (colors, font sizes, font family, etc..)
+$light: #DBDCE1;
+
+// Include custom variables before importing Bootstrap
+$font-family-base: 'Albert Sans', sans-serif;
+$headings-font-family: 'Albert Sans', sans-serif;
+
+$h1-font-size: 2.986rem;
+$h2-font-size: 2.488rem;
+$h3-font-size: 2.074rem;
+$h4-font-size: 1.728rem;
+$h5-font-size: 1.44rem;
+$h6-font-size: 1.2rem;
+$font-size-base: 1rem;
+$font-size-sm: 0.833rem;
+
+// Import Bootstrap's SCSS
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+// Add additional custom styles below
+body {
+    font-family: 'Albert Sans', sans-serif;
+}

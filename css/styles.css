@@ -1,0 +1,61 @@
+.hero-section {
+    background-image: url('../images/hero-image.png') ;
+    background-size: cover;
+    background-position: center center;
+    height: 500px;
+    position: relative;
+    padding: 200px 0px;
+}
+
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.row p {
+    color: #266577
+}
+
+.image-wrapper {
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+    position: relative;
+}
+
+.image-wrapper img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#NEWS .card-body {
+    background-color: #FFFFFF;
+}
+
+body.about {
+    background-image: url('../images/about-us.jpg');
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    position: relative;
+}
+
+footer {
+    background-color: #FFFFFF;
+}
