@@ -1,5 +1,51 @@
+[data-theme="light"] {
+    --color-bg: #fff;
+    --color-fg: #212529;
+    --color-mid: #DBDCE1;
+    --bandcamp-blue: #266577;
+}
+
+[data-theme="dark"] {
+    --color-bg: #212529;
+    --color-fg: #fff;
+    --color-mid: #383d45;
+    --bandcamp-blue: #6399A8;
+}
+
+button[data-theme-toggle] {
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.material-icons {
+    color: var(--color-fg); /* Use the --color-fg variable */
+    transition: color 0.3s ease; /* Smooth transition */
+}
+
+.theme-toggle-transition i {
+    transition: opacity 1s ease;
+    opacity: 1;
+}
+
+.theme-toggle-transition {
+    transform: scale(1.2);
+    transition: transform 1s ease;
+}
+
+body {
+    background-color: var(--color-bg);
+    color: var(--color-fg);
+    transition: background-color 1s ease, color 1s ease;
+}
+
 .hero-section {
-    background-image: url('../images/hero-image.png') ;
+    background-image: url('../images/hero-image.png');
     background-size: cover;
     background-position: center center;
     height: 500px;
@@ -25,7 +71,7 @@
 }
 
 .row p {
-    color: #266577
+    color: var(--bandcamp-blue)
 }
 
 .image-wrapper {
@@ -49,7 +95,7 @@
 }
 
 body.about {
-    background-image: url('../images/about-us.jpg');
+    background-image: url('../images/about-us.png');
     background-size: cover;
     background-position: center center;
     width: 100%;
@@ -57,5 +103,18 @@ body.about {
 }
 
 footer {
-    background-color: #FFFFFF;
+    background-color: var(--color-bg);
+    color: var(--color-fg);
+}
+
+.scale-hover {
+    transition: transform .2s;
+}
+
+.scale-hover:hover {
+    transform: scale(1.1);
+}
+
+.fab {
+    color: var(--bandcamp-blue);
 }

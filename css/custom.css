@@ -2114,7 +2114,7 @@ progress {
   line-height: 1.5;
   color: var(--bs-body-color);
   appearance: none;
-  background-color: #DBDCE1;
+  background-color: var(--color-mid);
   background-clip: padding-box;
   border: transparent;
   border-radius: 0;
@@ -2132,7 +2132,7 @@ progress {
   cursor: pointer;
 }
 .form-control:focus {
-  color: var(--bs-body-color);
+  color: var(--color-fg);
   background-color: var(--bs-body-bg);
   border-color: rgb(134, 182.5, 254);
   outline: 0;
@@ -2651,10 +2651,10 @@ textarea.form-control-lg {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: var(--bs-body-color);
+  color: var(--color-fg);
   text-align: center;
   white-space: nowrap;
-  background-color: #DBDCE1;
+  background-color: var(--color-mid);
   border: transparent;
   border-radius: 0;
 }
@@ -2967,11 +2967,11 @@ textarea.form-control-lg {
 }
 
 .btn-primary {
-  --bs-btn-color: #000000;
-  --bs-btn-bg: #DBDCE1;
+  --bs-btn-color: var(--color-fg);
+  --bs-btn-bg: var(--color-mid);
   --bs-btn-border-color: transparent;
   --bs-btn-hover-color: #DBDCE1;
-  --bs-btn-hover-bg: #6399A8;
+  --bs-btn-hover-bg: var(--bandcamp-blue);
   --bs-btn-hover-border-color: transparent;
   --bs-btn-focus-shadow-rgb: transparent;
   --bs-btn-active-color: #fff;
@@ -3890,7 +3890,7 @@ textarea.form-control-lg {
   align-items: center;
   justify-content: space-between;
   padding: var(--bs-navbar-padding-y) var(--bs-navbar-padding-x);
-  background-color: #FFFFFF
+  background-color: var(--color-bg);
 }
 .navbar > .container,
 .navbar > .container-fluid,
@@ -4297,7 +4297,7 @@ textarea.form-control-lg {
   --bs-card-title-spacer-y: 0.5rem;
   --bs-card-title-color: ;
   --bs-card-subtitle-color: ;
-  --bs-card-border-width: var(--bs-border-width);
+  --bs-card-border-width: 0;
   --bs-card-border-color: var(--bs-border-color-translucent);
   --bs-card-border-radius: var(--bs-border-radius);
   --bs-card-box-shadow: ;
@@ -4320,7 +4320,7 @@ textarea.form-control-lg {
   word-wrap: break-word;
   background-color: var(--bs-card-bg);
   background-clip: border-box;
-  border: var(--bs-card-border-width) solid var(--bs-card-border-color);
+  border: 0;
   border-radius: var(--bs-card-border-radius);
 }
 .card > hr {
@@ -4349,8 +4349,8 @@ textarea.form-control-lg {
 .card-body {
   flex: 1 1 auto;
   padding: 3px;
-  color: var(--bs-card-color);
-  background-color: #E0E1DB;
+  color: var(--color-fg);
+  background-color: var(--color-mid);
 }
 
 .card-title {
@@ -4928,8 +4928,8 @@ textarea.form-control-lg {
 }
 
 .list-group {
-  --bs-list-group-color: var(--bs-body-color);
-  --bs-list-group-bg: #DBDCE1;
+  --bs-list-group-color: var(--color-fg);
+  --bs-list-group-bg: var(--color-mid);
   --bs-list-group-border-color: #000000;
   --bs-list-group-border-width: var(--bs-border-width);
   --bs-list-group-border-radius: var(--bs-border-radius);
@@ -4966,15 +4966,21 @@ textarea.form-control-lg {
   color: var(--bs-list-group-action-color);
   text-align: inherit;
 }
-.list-group-item-action:hover, .list-group-item-action:focus {
+.list-group-item-action:hover {
   z-index: 1;
-  color: var(--bs-list-group-action-hover-color);
+  color: var(--color-fg);
   text-decoration: none;
-  background-color: var(--bs-list-group-action-hover-bg);
+  background-color: var(--color-bg);
+}
+.list-group-item-action:focus {
+  z-index: 1;
+  color: var(--color-bg);
+  text-decoration: none;
+  background-color: var(--bandcamp-blue);
 }
 .list-group-item-action:active {
-  color: var(--bs-list-group-action-active-color);
-  background-color: var(--bs-list-group-action-active-bg);
+  color: var(--color-fg);
+  background-color: var(--color-bg);
 }
 
 .list-group-item {
@@ -6020,7 +6026,6 @@ textarea.form-control-lg {
   background: none;
   border: 0;
   opacity: 1;
-  transition: opacity 0.15s ease;
   filter: invert(1);
   mix-blend-mode: difference;
 }
@@ -6036,7 +6041,7 @@ textarea.form-control-lg {
   color: #fff;
   text-decoration: none;
   outline: 0;
-  opacity: 0.9;
+  opacity: 1;
 }
 
 .carousel-control-prev {
@@ -8367,7 +8372,7 @@ textarea.form-control-lg {
 /* rtl:end:remove */
 .text-primary {
   --bs-text-opacity: 1;
-  color: #266577 !important;
+  color: var(--bandcamp-blue) !important;
   text-decoration: none;
   font-weight: bold;
 }
@@ -8694,7 +8699,7 @@ textarea.form-control-lg {
 
 .bg-light {
   --bs-bg-opacity: 1;
-  background-color: #DBDCE1 !important;
+  background-color: var(--color-mid) !important;
 }
 
 .bg-dark {
